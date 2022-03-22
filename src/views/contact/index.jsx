@@ -18,24 +18,28 @@ const PersonAvatar = mstyled(Avatar)`
     height: 200px;
     background-color: #000000;
 `
+const PersonCard = styled.img`
+  width: 200px; 
+  height: 200px; 
+  object-fit: cover; 
+`
 
 export default function Home() {
       return (
         <PageContainer>
-            <ImageList sx={{ width: 1, height: 450, flexDirection: "column"}} cols={5}>
+            <ImageList sx={{ width: 1, height: 1, flexDirection: "column"}} cols={5}>
                 {itemData.map((item) => (
                   <PersonAvatar variant="rounded">
                     <ImageListItem>
-                      <img
-                      src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                      srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                      alt={item.title}
-                      loading="lazy"
+                      <PersonCard
+                          src={item.img}
+                          alt={item.img}
+                          loading="lazy"
                       />
                       <ImageListItemBar
                         title={item.title}
                         subtitle={<span>by: {item.author}</span>}
-                        position="below"
+                        position="bottom"
                       />
                     </ImageListItem>
                   </PersonAvatar>

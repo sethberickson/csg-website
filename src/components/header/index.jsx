@@ -14,7 +14,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { styled as mstyled } from '@mui/material/styles';
 import styled from 'styled-components'
-import { ImageURLs } from '../../constants/Constants'
+import { ImageURLs, ColorConstants } from '../../constants/Constants'
 
 const pages = [
     {name: "Home", location: "/home"},
@@ -25,7 +25,7 @@ const pages = [
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const AppHeader = mstyled(AppBar)`
-    background-color: #000000;
+    background-color: ${ColorConstants.black};
 `;
 
 const Logo = styled.img`
@@ -55,13 +55,7 @@ function CustomAppBar() {
     setAnchorElUser(null);
   };
 
-//   const navigateTo = (location) => {
-//     // console.log(location)
-//     navigate('/team');
-//     setAnchorElNav(null);
-//   }
-
-  let siteLogo = ImageURLs.csg_s3_site_images + ImageURLs.csg_logo_blend
+  let siteLogo = ImageURLs.csg_s3_site_images + ImageURLs.csg_logo_blue_fade
   console.log(siteLogo)
 
   return (

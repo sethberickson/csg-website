@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Montserrat'
 }
 
 .App-logo {
@@ -28,6 +29,10 @@
   color: #61dafb;
 }
 
+.subtitle-text {
+  color: '#00ced3'
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +41,7 @@
     transform: rotate(360deg);
   }
 }
+
+/* Import Fonts */
+/* Montserrat */ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+/* Montserrat Semibold */ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600&display=swap');

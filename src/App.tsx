@@ -8,12 +8,17 @@ import {
 import TeamPage from './views/team/';
 import Home from './views/home';
 import Test from './views/test';
+import About from './views/about';
 import Contact from './views/contact';
+// import UploadImageToS3 from './views/uploadImages';
 import styled from 'styled-components'
 import CustomAppBar from './components/header';
+import { ColorConstants, ImageURLs } from './constants/Constants';
+import './App.css'
 
 const AppContainer = styled.div`
-  background-color: #111111;
+    background-color: ${ColorConstants.black};
+    padding: 10px 50px 20px 50px; 
 `
 
 function App() {
@@ -27,7 +32,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/home" element={<Home />} />
                         <Route path="/team" element={<TeamPage />} />
-                        <Route path="/about" element={<Test />} />
+                        <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />
                     </Routes>
                 </Router>
@@ -39,9 +44,3 @@ function App() {
 export default App;
 
 
-{/* <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/home" element={<Home />} />
-    <Route path="/team" element={<TeamPage />} />
-    <Route path="/about" element={<Test />} />
-</Routes> */}
