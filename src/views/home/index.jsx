@@ -5,10 +5,12 @@ import {styled as mstyled } from '@mui/material/styles'
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Box from '@mui/material/Box'
 import FullWidthTabs from '../../components/homeTabView'
 import { ColorConstants, ImageURLs } from '../../constants/Constants';
 import Divider from '@mui/material/Divider';
 import About from '../about';
+import PriorCompanies from '../../components/priorCompanies';
 
 const siteLogo = ImageURLs.csg_s3_site_images + ImageURLs.csg_logo_blend
 
@@ -16,13 +18,15 @@ const BlackContainer = styled.div`
     display: flex;
     flex-direction: column;
     background-color: ${ColorConstants.black};
+    padding-bottom: 10vw; 
 `
-const WhiteContainer = styled.div`
+const BlackContainer2 = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: ${ColorConstants.white}
+    background-color: ${ColorConstants.black};
+    align-items: center; 
+    
 `
-
 const Title = styled.p`
     font-size: 7vw;
     color: ${ColorConstants.white}; 
@@ -57,11 +61,22 @@ export default function Home() {
             <Subtitle><CustomColor>WELCOME ABOARD.</CustomColor></Subtitle>
         </BlackContainer>
         <WhiteDivider />
-        <About />
+        <BlackContainer2>
+            <About />
+            <WhiteDivider />
+            <Subtitle>Specialty Areas</Subtitle>
+            <Box display='flex' sx={{width: '75%', mx: 'None'}} 
+                alignItems="center"
+                justifyContent="center">
+                <FullWidthTabs />
+            </Box>
+        </BlackContainer2>
         <WhiteDivider />
-        <Subtitle>Specialty Areas</Subtitle>
-        <FullWidthTabs />
-        
+        <BlackContainer2>
+            <Title>A Trusted Partner</Title>
+            <Subtitle><CustomColor>Dozens of Clients Consulted</CustomColor></Subtitle>
+            <PriorCompanies />
+        </BlackContainer2>
         </>
       );
     }

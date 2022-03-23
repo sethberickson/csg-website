@@ -48,7 +48,7 @@ const Heading = styled.p`
 `
 const Subheading = styled.p`
     font-size: 2vw;
-    font-family: 'Montserrat';
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     color: ${ColorConstants.white};
 `
@@ -65,7 +65,6 @@ const ImageBackground = styled.img`
     width: 100%;
     height: auto;
     object-fit: cover;
-    
     padding-top: 50px; 
 `
 

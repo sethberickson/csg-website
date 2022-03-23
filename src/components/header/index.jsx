@@ -17,12 +17,13 @@ import styled from 'styled-components'
 import { ImageURLs, ColorConstants } from '../../constants/Constants'
 
 const pages = [
+  // these are the tabs at the top of the screen. Add tabs here if needed
     {name: "Home", location: "/home"},
-    {name: "About", location: "/about"},
+    // {name: "About", location: "/about"},
     {name: "Team", location: "/team"},
     {name: "Contact", location: "/contact"},
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Profile", "Account", "Portal"];
 
 const AppHeader = mstyled(AppBar)`
     background-color: ${ColorConstants.black};
@@ -131,7 +132,7 @@ function CustomAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="" />
+                <Avatar alt="" src="" sx={{ bgcolor: '#000000'}} />
               </IconButton>
             </Tooltip>
             <Menu

@@ -7,13 +7,12 @@ import {
     from "react-router-dom";
 import TeamPage from './views/team/';
 import Home from './views/home';
-import Test from './views/test';
 import About from './views/about';
 import Contact from './views/contact';
-// import UploadImageToS3 from './views/uploadImages';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import CustomAppBar from './components/header';
-import { ColorConstants, ImageURLs } from './constants/Constants';
+import Footer from './components/footer';
+import { ColorConstants } from './constants/Constants';
 import './App.css'
 
 const AppContainer = styled.div`
@@ -35,6 +34,7 @@ function App() {
                         <Route path="/about" element={<About />} />
                         <Route path="/contact" element={<Contact />} />
                     </Routes>
+                    <Footer />
                 </Router>
             </AppContainer>
         </>
@@ -42,5 +42,6 @@ function App() {
 }
 
 export default App;
+
 
 

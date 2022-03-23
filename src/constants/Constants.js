@@ -1,5 +1,7 @@
 export const ImageURLs = {
     csg_s3_site_images: "https://csg-website.s3.us-west-1.amazonaws.com/site-images/"
+    ,csg_s3_member_images: "https://csg-website.s3.us-west-1.amazonaws.com/csg-members/images/"
+    ,csg_company_logos: "https://csg-website.s3.us-west-1.amazonaws.com/company-logos"
     ,csg_logo_blend: 'CSG-logo-blend.png'
     ,csg_logo_navy_royal: 'CSG-logo-navy-royal.png'
     ,csg_logo_navy: 'CSG-logo-navy.png' 
@@ -21,3 +23,4 @@ export const ColorConstants = {
     blue5: "#293aa6",
     orange1: "#FFAB00",
 }
+
